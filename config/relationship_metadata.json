@@ -1,0 +1,2349 @@
+{
+  "metadata": {
+    "generated_at": "2025-11-25T18:31:31.621260",
+    "csv_files_analyzed": 78,
+    "total_relationships": 138,
+    "version": "1.0",
+    "data_directory": "data",
+    "schema_file": "./AlleCDNI_TableNames_Columns_Dtypes_SuperUser_SQLBuilder.xlsx"
+  },
+  "relationships": {
+    "account": {
+      "AccountHolderId": {
+        "target_table": "accountholder",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 11834,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "accountholder": {
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "LegalEntityTypeId": {
+        "target_table": "legalentitytype",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "accountholdercontactinformation": {
+      "AccountHolderId": {
+        "target_table": "accountholder",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "approlelocale": {
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "appuser": {
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "auditentityassociation": {
+      "AuditEventId": {
+        "target_table": "auditevent",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "char",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "auditevent": {
+      "UserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "auditeventdata": {
+      "AuditEventId": {
+        "target_table": "auditevent",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "char",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "controllingauthority": {
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "country": {
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "countrylocale": {
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "disclaimerlocale": {
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "ecoidentifier": {
+      "AccountId": {
+        "target_table": "account",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 5000,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "ecoidentifieruser": {
+      "EcoIdentifierId": {
+        "target_table": "ecoidentifier",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "UserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "fueltypelocale": {
+      "FuelTypeId": {
+        "target_table": "fueltype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 4,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 4,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "generaldisclaimerlocale": {
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 4,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "generatedecocardnumber": {
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "gos": {
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 600,
+        "null_rate": 0.008333333333333333,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 600,
+        "null_rate": 0.008333333333333333,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "goscontactinformation": {
+      "GosId": {
+        "target_table": "gos",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 377,
+        "null_rate": 0.05570291777188329,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "gosfacility": {
+      "GosId": {
+        "target_table": "gos",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "gostransaction": {
+      "AccountId": {
+        "target_table": "account",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10055,
+        "null_rate": 0.005469915464942815,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "AccountHolderId": {
+        "target_table": "accountholder",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10055,
+        "null_rate": 0.005469915464942815,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "EcoIdentifierId": {
+        "target_table": "ecoidentifier",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "EcoIdentifierUserId": {
+        "target_table": "ecoidentifieruser",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "char",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "GosId": {
+        "target_table": "gos",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "GosFacilityId": {
+        "target_table": "gosfacility",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "VesselId": {
+        "target_table": "vessel",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "FuelTypeId": {
+        "target_table": "fueltype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10055,
+        "null_rate": 0.16757831924415714,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "UserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "gostransactionrequestlog": {
+      "GosFacilityId": {
+        "target_table": "gosfacility",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "FuelTypeId": {
+        "target_table": "fueltype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10027,
+        "null_rate": 0.15228882018549916,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "TransactionId": {
+        "target_table": "transaction",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "longtext",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "AppUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "EcoIdentifierUserId": {
+        "target_table": "ecoidentifieruser",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "char",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "AccountId": {
+        "target_table": "account",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10027,
+        "null_rate": 0.8504039094444998,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": [
+          "High NULL rate: 85.0% of values are NULL"
+        ]
+      }
+    },
+    "gostransactiontypelocale": {
+      "GosTransactionTypeId": {
+        "target_table": "gostransactiontype",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 1016,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "hulltypelocale": {
+      "HullTypeId": {
+        "target_table": "hulltype",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 9,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "mail": {
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "mailattachment": {
+      "FileDocumentId": {
+        "target_table": "filedocument",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "MailId": {
+        "target_table": "mail",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "nationalinstitute": {
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 6,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "nationalinstituteecoaccountrequestfield": {
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "nationalinstituteecoaccountrequestfieldlocale": {
+      "NationalInstituteEcoAccountRequestFieldId": {
+        "target_table": "nationalinstituteecoaccountrequestfield",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "passwordsettings": {
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "refreshtoken": {
+      "UserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "UserDeviceId": {
+        "target_table": "userdevice",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "char",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "report": {
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "UserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "reportexecution": {
+      "ReportId": {
+        "target_table": "report",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "AccountHolderId": {
+        "target_table": "accountholder",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "AccountId": {
+        "target_table": "account",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "EcoIdentifierId": {
+        "target_table": "ecoidentifier",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "GosId": {
+        "target_table": "gos",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "longtext",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "VesselTypeId": {
+        "target_table": "vesseltype",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "UserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "reportlocale": {
+      "ReportId": {
+        "target_table": "report",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "reportresult": {
+      "ReportExecutionId": {
+        "target_table": "reportexecution",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "reqecoaccount": {
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "AccountId": {
+        "target_table": "account",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "reqecoaccountadditionalinfo": {
+      "ReqEcoAccountId": {
+        "target_table": "reqecoaccount",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "NationalInstituteEcoAccountRequestFieldId": {
+        "target_table": "nationalinstituteecoaccountrequestfield",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "reqecoaccountcompany": {
+      "ReqEcoAccountId": {
+        "target_table": "reqecoaccount",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "AccountHolderId": {
+        "target_table": "accountholder",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "reqecoaccountuser": {
+      "ReqEcoAccountId": {
+        "target_table": "reqecoaccount",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "UserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "reqecoaccountvessels": {
+      "ReqEcoAccountId": {
+        "target_table": "reqecoaccount",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "VesselTypeId": {
+        "target_table": "vesseltype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 842,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "HullTypeId": {
+        "target_table": "hulltype",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 842,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "VesselId": {
+        "target_table": "vessel",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "transaction": {
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "FacilityUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "RecipientId": {
+        "target_table": "vesselecoidentifier",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "transactiondataimport": {
+      "TransactionId": {
+        "target_table": "transaction",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "longtext",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "transactiontariff": {
+      "FuelTypeId": {
+        "target_table": "fueltype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 4,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "translation": {
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ReportId": {
+        "target_table": "report",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "VesselTypeId": {
+        "target_table": "vesseltype",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "unitofmeasurementlocale": {
+      "UnitOfMeasurementId": {
+        "target_table": "unitofmeasurement",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 9,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 9,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "userdevice": {
+      "AppUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "DeviceId": {
+        "target_table": "device",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "char",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      }
+    },
+    "vessel": {
+      "VesselTypeId": {
+        "target_table": "vesseltype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10000,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "HullTypeId": {
+        "target_table": "hulltype",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10000,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "vesselaccountholder": {
+      "VesselId": {
+        "target_table": "vessel",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "AccountHolderId": {
+        "target_table": "accountholder",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10000,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "vesselecoidentifier": {
+      "VesselId": {
+        "target_table": "vessel",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "EcoIdentifierId": {
+        "target_table": "ecoidentifier",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "vesseltypelocale": {
+      "VesselTypeId": {
+        "target_table": "vesseltype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 128,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 128,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "wastecollectioncompany": {
+      "NationalInstituteId": {
+        "target_table": "nationalinstitute",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 36,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "wastecollectionfacility": {
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "wastecompanycontactinformation": {
+      "WasteCollectionCompanyId": {
+        "target_table": "wastecollectioncompany",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 44,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "CountryId": {
+        "target_table": "country",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 44,
+        "null_rate": 0.5681818181818182,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": [
+          "High NULL rate: 56.8% of values are NULL"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      }
+    },
+    "wasteregistration": {
+      "WasteCollectionCompanyId": {
+        "target_table": "wastecollectioncompany",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 58244,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "VesselId": {
+        "target_table": "vessel",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "AccountholderId": {
+        "target_table": "accountholder",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 58244,
+        "null_rate": 0.5369480118123755,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": [
+          "High NULL rate: 53.7% of values are NULL"
+        ]
+      },
+      "EcoIdentifierId": {
+        "target_table": "ecoidentifier",
+        "target_column": "Id",
+        "discovery_method": "convention",
+        "confidence": "LOW",
+        "match_rate": null,
+        "data_type": "int",
+        "verified": false,
+        "warnings": [
+          "Convention-based inference, not validated with data"
+        ]
+      },
+      "ModifiedByUserId": {
+        "target_table": "appuser",
+        "target_column": "Id",
+        "discovery_method": "exception",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "verified": false,
+        "source": "relationship_exceptions.py"
+      },
+      "VesselTypeId": {
+        "target_table": "vesseltype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "MEDIUM",
+        "match_rate": 0.9411764705882353,
+        "data_type": "int",
+        "sample_size": 58244,
+        "null_rate": 0.9967550305610878,
+        "is_sampled": false,
+        "orphan_count": 1,
+        "verified": true,
+        "warnings": [
+          "High NULL rate: 99.7% of values are NULL",
+          "Orphan records: 1 values (5.9%) not found in vesseltype"
+        ]
+      }
+    },
+    "wasteregistrationdetail": {
+      "WasteRegistrationId": {
+        "target_table": "wasteregistration",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10000,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "WasteTypeId": {
+        "target_table": "wastetype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 10000,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "wastetype": {
+      "UnitOfMeasurementId": {
+        "target_table": "unitofmeasurement",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 14,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    },
+    "wastetypelocale": {
+      "WasteTypeId": {
+        "target_table": "wastetype",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 42,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      },
+      "TranslationLanguageId": {
+        "target_table": "translationlanguage",
+        "target_column": "Id",
+        "discovery_method": "value_based",
+        "confidence": "HIGH",
+        "match_rate": 1.0,
+        "data_type": "int",
+        "sample_size": 42,
+        "null_rate": 0.0,
+        "is_sampled": false,
+        "orphan_count": 0,
+        "verified": true,
+        "warnings": []
+      }
+    }
+  },
+  "junction_tables": {
+    "vesselecoidentifier": {
+      "type": "many-to-many",
+      "links": [
+        "vessel",
+        "ecoidentifier"
+      ],
+      "temporal": {
+        "valid_from": "ValidFromDateTime",
+        "valid_until": "ValidUntilDateTime",
+        "null_means_active": true,
+        "description": "Tracks vessel-eco assignments over time"
+      },
+      "description": "Links vessels to their ECO identifiers with temporal validity"
+    },
+    "vesselaccountholder": {
+      "type": "many-to-many",
+      "links": [
+        "vessel",
+        "accountholder"
+      ],
+      "temporal": {
+        "valid_from": "ValidFrom",
+        "valid_until": "ValidUntil",
+        "null_means_active": true,
+        "description": "Tracks vessel ownership/operation over time"
+      },
+      "description": "Links vessels to account holders (owners/operators)"
+    }
+  },
+  "data_quality": {
+    "account": {
+      "row_count": 11834,
+      "completeness_score": 0.9626258480407542,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "accountholder": {
+      "row_count": 11739,
+      "completeness_score": 0.8768719652440583,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "country": {
+      "row_count": 233,
+      "completeness_score": 0.9989270386266095,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "disclaimerlocale": {
+      "row_count": 792,
+      "completeness_score": 0.3362794612794613,
+      "is_sample": false,
+      "high_null_columns": {
+        "TranslationLanguageId": {
+          "null_rate": 0.9558080808080808,
+          "impact": "May affect join coverage"
+        },
+        "Text": {
+          "null_rate": 0.9696969696969697,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "ecoidentifier": {
+      "row_count": 5000,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "ecoidentifieruser": {
+      "row_count": 10000,
+      "completeness_score": 0.5782222222222222,
+      "is_sample": false,
+      "high_null_columns": {
+        "UserId": {
+          "null_rate": 0.6422,
+          "impact": "May affect join coverage"
+        },
+        "AnalogueInfo_BlockedOnDateTime": {
+          "null_rate": 0.9553,
+          "impact": "May affect join coverage"
+        },
+        "BoatMasterInfo_Identifier": {
+          "null_rate": 0.6422,
+          "impact": "May affect join coverage"
+        },
+        "BoatMasterInfo_ConfirmationToken": {
+          "null_rate": 0.6422,
+          "impact": "May affect join coverage"
+        },
+        "BoatMasterInfo_IsAck": {
+          "null_rate": 0.6422,
+          "impact": "May affect join coverage"
+        },
+        "BoatMasterInfo_AcceptedOnDateTime": {
+          "null_rate": 0.7131,
+          "impact": "May affect join coverage"
+        },
+        "BoatMasterInfo_DeclinedOnDateTime": {
+          "null_rate": 0.997,
+          "impact": "May affect join coverage"
+        },
+        "BoatMasterInfo_ConfirmationLinkExpirationDateTime": {
+          "null_rate": 0.6422,
+          "impact": "May affect join coverage"
+        },
+        "BoatMasterInfo_Language": {
+          "null_rate": 0.6422,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "fueltypelocale": {
+      "row_count": 4,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "generaldisclaimerlocale": {
+      "row_count": 4,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "gos": {
+      "row_count": 600,
+      "completeness_score": 0.997037037037037,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "goscontactinformation": {
+      "row_count": 377,
+      "completeness_score": 0.6180371352785146,
+      "is_sample": false,
+      "high_null_columns": {
+        "SubType": {
+          "null_rate": 0.9840848806366048,
+          "impact": "May affect join coverage"
+        },
+        "FirstName": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "LastName": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "Salutation": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "PhoneNumber": {
+          "null_rate": 0.9920424403183024,
+          "impact": "May affect join coverage"
+        },
+        "FaxNumber": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "EmailAddress": {
+          "null_rate": 0.9893899204244032,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "gosfacility": {
+      "row_count": 1332,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "gostransaction": {
+      "row_count": 10055,
+      "completeness_score": 0.6805309925842649,
+      "is_sample": false,
+      "high_null_columns": {
+        "EcoIdentifierUserName": {
+          "null_rate": 0.7383391347588265,
+          "impact": "May affect join coverage"
+        },
+        "GosFacilityUserName": {
+          "null_rate": 0.7422178020885132,
+          "impact": "May affect join coverage"
+        },
+        "DeclineReason": {
+          "null_rate": 0.9995027349577325,
+          "impact": "May affect join coverage"
+        },
+        "IsReverted": {
+          "null_rate": 0.7840875186474391,
+          "impact": "May affect join coverage"
+        },
+        "ReversalTransactionId": {
+          "null_rate": 0.9885629040278469,
+          "impact": "May affect join coverage"
+        },
+        "ModifiedByUsername": {
+          "null_rate": 0.792143212332173,
+          "impact": "May affect join coverage"
+        },
+        "ChangeReason": {
+          "null_rate": 0.7899552461461959,
+          "impact": "May affect join coverage"
+        },
+        "IsReversePending": {
+          "null_rate": 0.7785181501740428,
+          "impact": "May affect join coverage"
+        },
+        "PendingPaymentCounter": {
+          "null_rate": 0.9853804077573347,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "gostransactionrequestlog": {
+      "row_count": 10027,
+      "completeness_score": 0.6313204348259698,
+      "is_sample": false,
+      "high_null_columns": {
+        "DeclineReason": {
+          "null_rate": 0.99900269272963,
+          "impact": "May affect join coverage"
+        },
+        "InternalReasonForStatus": {
+          "null_rate": 0.7522688740400918,
+          "impact": "May affect join coverage"
+        },
+        "StatusReason": {
+          "null_rate": 0.7524683354941658,
+          "impact": "May affect join coverage"
+        },
+        "AccountId": {
+          "null_rate": 0.8504039094444998,
+          "impact": "May affect join coverage"
+        },
+        "Amount": {
+          "null_rate": 0.8504039094444998,
+          "impact": "May affect join coverage"
+        },
+        "EcoCardNumber": {
+          "null_rate": 0.9104418071207739,
+          "impact": "May affect join coverage"
+        },
+        "EcoIdentifierUserIdentifier": {
+          "null_rate": 0.99900269272963,
+          "impact": "May affect join coverage"
+        },
+        "TransactionIdToReverse": {
+          "null_rate": 0.994315348558891,
+          "impact": "May affect join coverage"
+        },
+        "Remarks": {
+          "null_rate": 0.7608457165652738,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "gostransactiontypelocale": {
+      "row_count": 1016,
+      "completeness_score": 0.7539370078740157,
+      "is_sample": false,
+      "high_null_columns": {
+        "Unnamed: 3": {
+          "null_rate": 0.984251968503937,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "hulltypelocale": {
+      "row_count": 9,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "nationalinstitute": {
+      "row_count": 6,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "reportresult": {
+      "row_count": 970,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "reqecoaccountvessels": {
+      "row_count": 842,
+      "completeness_score": 0.8074182349716792,
+      "is_sample": false,
+      "high_null_columns": {
+        "ImoNumber": {
+          "null_rate": 0.8871733966745843,
+          "impact": "May affect join coverage"
+        },
+        "OtherId": {
+          "null_rate": 0.8444180522565321,
+          "impact": "May affect join coverage"
+        },
+        "VesselId": {
+          "null_rate": 0.7327790973871734,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "transactiondataimport": {
+      "row_count": 9706,
+      "completeness_score": 0.7,
+      "is_sample": false,
+      "high_null_columns": {
+        "ErrorMsg": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "ModifiedByUsername": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "ChangeReason": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "transactiontariff": {
+      "row_count": 4,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "unitofmeasurementlocale": {
+      "row_count": 9,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "vessel": {
+      "row_count": 10000,
+      "completeness_score": 0.7766333333333333,
+      "is_sample": false,
+      "high_null_columns": {
+        "Imo": {
+          "null_rate": 0.9893,
+          "impact": "May affect join coverage"
+        },
+        "Remarks": {
+          "null_rate": 0.8307,
+          "impact": "May affect join coverage"
+        },
+        "DeletedOnDateTime": {
+          "null_rate": 0.958,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "vesselaccountholder": {
+      "row_count": 10000,
+      "completeness_score": 0.82974,
+      "is_sample": false,
+      "high_null_columns": {
+        "ValidUntil": {
+          "null_rate": 0.8513,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "vesselecoidentifier": {
+      "row_count": 5000,
+      "completeness_score": 0.8183199999999999,
+      "is_sample": false,
+      "high_null_columns": {
+        "ValidUntilDateTime": {
+          "null_rate": 0.9084,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "vesseltypelocale": {
+      "row_count": 128,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "wastecollectioncompany": {
+      "row_count": 36,
+      "completeness_score": 0.9230769230769231,
+      "is_sample": false,
+      "high_null_columns": {
+        "ChangeReason": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "wastecollectionfacility": {
+      "row_count": 133,
+      "completeness_score": 0.8007518796992481,
+      "is_sample": false,
+      "high_null_columns": {
+        "ChangeReason": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "DeletedOnDateTime": {
+          "null_rate": 0.9924812030075187,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "wastecompanycontactinformation": {
+      "row_count": 44,
+      "completeness_score": 0.4892344497607656,
+      "is_sample": false,
+      "high_null_columns": {
+        "SubType": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "FirstName": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "LastName": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "Salutation": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "Street": {
+          "null_rate": 0.5681818181818182,
+          "impact": "May affect join coverage"
+        },
+        "City": {
+          "null_rate": 0.5681818181818182,
+          "impact": "May affect join coverage"
+        },
+        "PostalCode": {
+          "null_rate": 0.5681818181818182,
+          "impact": "May affect join coverage"
+        },
+        "CountryId": {
+          "null_rate": 0.5681818181818182,
+          "impact": "May affect join coverage"
+        },
+        "PhoneNumber": {
+          "null_rate": 0.6818181818181818,
+          "impact": "May affect join coverage"
+        },
+        "FaxNumber": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        },
+        "EmailAddress": {
+          "null_rate": 0.75,
+          "impact": "May affect join coverage"
+        },
+        "ChangeReason": {
+          "null_rate": 1.0,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "wasteregistration": {
+      "row_count": 58244,
+      "completeness_score": 0.5779874842095843,
+      "is_sample": false,
+      "high_null_columns": {
+        "UsedOilLogId": {
+          "null_rate": 0.6465730375661012,
+          "impact": "May affect join coverage"
+        },
+        "VesselId": {
+          "null_rate": 0.5370166884142573,
+          "impact": "May affect join coverage"
+        },
+        "AccountholderId": {
+          "null_rate": 0.5369480118123755,
+          "impact": "May affect join coverage"
+        },
+        "AccountholderHousenumber": {
+          "null_rate": 0.9269967721997115,
+          "impact": "May affect join coverage"
+        },
+        "AccountholderEmail": {
+          "null_rate": 0.9217258430052881,
+          "impact": "May affect join coverage"
+        },
+        "AccountholderPhonenumber": {
+          "null_rate": 0.995020946363574,
+          "impact": "May affect join coverage"
+        },
+        "EcoIdentifierId": {
+          "null_rate": 0.5369823501133164,
+          "impact": "May affect join coverage"
+        },
+        "BoatmasterName": {
+          "null_rate": 0.9999656616990591,
+          "impact": "May affect join coverage"
+        },
+        "DeletedOnDateTime": {
+          "null_rate": 0.9984891147586017,
+          "impact": "May affect join coverage"
+        },
+        "DeletedByUsername": {
+          "null_rate": 0.9986779754137766,
+          "impact": "May affect join coverage"
+        },
+        "ChangeReason": {
+          "null_rate": 0.9999828308495295,
+          "impact": "May affect join coverage"
+        },
+        "VesselCountryId": {
+          "null_rate": 0.9967378614106174,
+          "impact": "May affect join coverage"
+        },
+        "VesselTypeId": {
+          "null_rate": 0.9967550305610878,
+          "impact": "May affect join coverage"
+        },
+        "Unnamed: 31": {
+          "null_rate": 0.9994505871849461,
+          "impact": "May affect join coverage"
+        },
+        "Unnamed: 32": {
+          "null_rate": 0.9999828308495295,
+          "impact": "May affect join coverage"
+        }
+      }
+    },
+    "wasteregistrationdetail": {
+      "row_count": 10000,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "wastetype": {
+      "row_count": 14,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    },
+    "wastetypelocale": {
+      "row_count": 42,
+      "completeness_score": 1.0,
+      "is_sample": false,
+      "high_null_columns": {}
+    }
+  },
+  "exceptions_applied": {}
+}

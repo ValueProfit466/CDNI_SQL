@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+.pdfenv/
+.claude/
+.pytest_cache/
+
+# Other markdown files
+*.md
+
+# CSV Data Files (contain sensitive production data)
+data/*.csv
+*.csv
+
+# Keep the README
+!README_TODO.md
+
+# Query history and saved queries
+saved_queries/
+
+# User guide and documentation output
+user_guide/
+pandoc_md_pdf_xelatex/
+schema_analysis_output/
+data/*.txt
+data/*.md
+docs/*.pdf
+
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+
