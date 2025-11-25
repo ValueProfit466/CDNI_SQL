@@ -25,6 +25,7 @@ data/*.csv
 
 # Keep the README
 !README_TODO.md
+!ARCHITECTURE.md
 
 # Query history and saved queries
 saved_queries/
