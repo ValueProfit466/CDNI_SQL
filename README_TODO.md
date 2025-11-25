@@ -1,4 +1,4 @@
-# CLAUDE.md
+# README.md
 
 ## Project Overview
 
